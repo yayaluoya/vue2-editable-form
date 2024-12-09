@@ -56,8 +56,8 @@ export class A extends BaseCon {
   }
 
   /**
-   * 获取右侧编辑栏的编辑项vnode
-   * 可以完全覆盖父类getRight返回的内容，也能扩展父类 getRight 返回的内容。
+   * 获取右侧编辑栏的编辑项 vnode
+   * 可以完全覆盖父类 getRight 返回的内容，也能扩展父类 getRight 返回的内容。
    * 这里就扩展一下
    * 因为是 ts 写的，所以在编辑器里面写的时候有完整的类型提示的。
    */
