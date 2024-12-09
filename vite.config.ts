@@ -1,48 +1,16 @@
 import { fileURLToPath, URL } from "node:url";
-import { defineConfig, UserConfigFnObject } from "vite";
+import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-import fs from "fs";
-import path from "path";
-import vitePluginAliOss from "vite-plugin-ali-oss";
-
-let aliYunOssOpPath = path.join(__dirname, "./.local/oss.config.json");
-
-const aliYunOptions = {
-  url: "",
-  region: "",
-  accessKeyId: "",
-  accessKeySecret: "",
-  bucket: "",
-  overwrite: true,
-};
-
-if (
-  fs
-    .statSync(aliYunOssOpPath, {
-      throwIfNoEntry: false,
-    })
-    ?.isFile()
-) {
-  let _ = JSON.parse(fs.readFileSync(aliYunOssOpPath).toString());
-  aliYunOptions.url = _.url;
-  aliYunOptions.region = _.region;
-  aliYunOptions.accessKeyId = _.accessKeyId;
-  aliYunOptions.accessKeySecret = _.accessKeySecret;
-  aliYunOptions.bucket = _.bucket;
-} else {
-  console.log("找不到阿里云配置文件", aliYunOssOpPath);
-}
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
-  let base =
-    command == "build" ? aliYunOptions.url + "/vue3-dynamic-form" : "/";
+  let base = "/";
   let outDir = "dist";
 
   return {
     base,
-    plugins: [vue(), vueJsx(), vitePluginAliOss(aliYunOptions)],
+    plugins: [vue(), vueJsx()],
     resolve: {
       alias: {
         "@": fileURLToPath(new URL("./src", import.meta.url)),
