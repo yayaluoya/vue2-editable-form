@@ -12,7 +12,7 @@ hero:
       link: /install
     - theme: alt
       text: 试一试
-      link: https://vue3-dynamic-form.dumogu.top/
+      link: https://vue3-dynamic-form.yayaluoya.sbs
 ---
 
 #### 主题定制

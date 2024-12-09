@@ -15,16 +15,13 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "打包scss-cssr.ts": "node ./.node/scss-handle.js",
-    "打包代码片段": "codess b",
-    "上传代码包到服务器": "sfs -s  -c ./sfs-v1.config.cjs"
+    "打包代码片段": "codess b"
   },
   "dependencies": {
     "@vicons/ionicons5": "^0.12.0",
     "color": "^4.2.3",
     "nanoid": "^5.0.7",
     "pinia": "^2.1.7",
-    "server-file-sync": "^1.7.2",
-    "vite-plugin-ali-oss": "^2.0.2",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3",
     "vue3-ace-editor": "^2.2.4",

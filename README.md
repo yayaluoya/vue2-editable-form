@@ -4,7 +4,7 @@
 
 拖动式的生成动态表单，而且通过 typescript 面向对象开发的，能非常方便的扩展控件，内部 ui 使用的 naive-ui 库，所以能非常方便的定制主题。
 
-demo https://vue3-dynamic-form.dumogu.top/
+demo https://vue3-dynamic-form.yayaluoya.sbs/
 
 #### 安装使用
 
