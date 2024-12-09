@@ -49,7 +49,7 @@ export {
  * 控件工具类
  * ConT.toConfigs 能把控件实例列表转成配置文件
  * ConT.toCons 能把配置文件转成控件实例列表
- * ConT.getFromData 通过实例列表获取默认formData
+ * ConT.getFromData 通过实例列表获取默认 formData
  */
 export { ConT } from "./src/components/dynamic-form/ConT";
 /**
