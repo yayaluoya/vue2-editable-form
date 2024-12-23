@@ -115,7 +115,7 @@ export class Test extends BaseForm {
         },
       },
     });
-    this.setShowLobel(false);
+    this.setShowLabel(false);
   }
 
   /**
