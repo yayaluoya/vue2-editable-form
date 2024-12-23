@@ -6,21 +6,10 @@ name: Publish Package to npmjs
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm ci
-      - run: npm run lib-build
-
-  publish-npm:
-    needs: build
+  build-and-publish-npm:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,6 +18,7 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+      - run: npm run lib-build
       - run: cd dist-lib
       - run: npm publish
         env:
