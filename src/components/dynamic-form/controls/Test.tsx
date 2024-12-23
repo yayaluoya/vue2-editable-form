@@ -48,7 +48,7 @@ export class Test extends BaseForm {
         },
       },
     });
-    this.setShowLobel(false);
+    this.setShowLabel(false);
   }
 
   renderRaw({ formData }: IConRenderOp) {

@@ -184,7 +184,7 @@ export class BaseForm extends BaseCon<"form"> {
    * 设置是否显示label
    * @param value 
    */
-  setShowLobel(value: FormItemProps["showLabel"]) {
+  setShowLabel(value: FormItemProps["showLabel"]) {
     this.showLabel = value;
     if (!this.selfProps.includes("showLabel")) {
       this.selfProps.push("showLabel");
