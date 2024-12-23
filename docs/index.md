@@ -40,7 +40,7 @@ export class A extends BaseCon {
   placeholder = "";
 
   /**
-   * 获取这个控件的实际vnode
+   * 获取这个控件的实际 vnode
    */
   renderRaw() {
     return (
@@ -56,10 +56,10 @@ export class A extends BaseCon {
   }
 
   /**
-   * 获取右侧编辑栏的编辑项vnode
-   * 可以完全覆盖父类getRight返回的内容，也能扩展父类getRight返回的内容。
+   * 获取右侧编辑栏的编辑项 vnode
+   * 可以完全覆盖父类 getRight 返回的内容，也能扩展父类 getRight 返回的内容。
    * 这里就扩展一下
-   * 因为是ts写的，所以在编辑器里面写的时候有完整的类型提示的。
+   * 因为是 ts 写的，所以在编辑器里面写的时候有完整的类型提示的。
    */
   getRight(op) {
     let _ = super.getRight(op);
