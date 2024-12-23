@@ -12,7 +12,6 @@ node_modules
 dist
 dist-ssr
 dist-lib/*
-!dist-lib/package.json
 coverage
 *.local
 
