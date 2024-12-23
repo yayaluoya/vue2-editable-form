@@ -54,6 +54,12 @@ export class BaseForm extends BaseCon<"form"> {
   label = "控件";
   /** 将值收集到外层表单 model 对象的路径 */
   path: string | undefined = undefined;
+
+  /**
+   * 表单的一些属性
+   * 见文档 https://www.naiveui.com/zh-CN/os-theme/components/form#FormItem-Props
+   */
+
   private labelAlign: FormItemProps["labelAlign"] = "right";
   private labelPlacement: FormItemProps["labelPlacement"] = "left";
   private labelStyle: FormItemProps["labelStyle"] = "";
@@ -172,6 +178,17 @@ export class BaseForm extends BaseCon<"form"> {
         return hRule(_);
       }),
     };
+  }
+
+  /**
+   * 设置是否显示label
+   * @param value 
+   */
+  setShowLobel(value: FormItemProps["showLabel"]) {
+    this.showLabel = value;
+    if (!this.selfProps.includes("showLabel")) {
+      this.selfProps.push("showLabel");
+    }
   }
 
   /**
