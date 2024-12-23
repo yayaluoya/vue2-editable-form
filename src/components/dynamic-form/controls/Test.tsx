@@ -27,13 +27,12 @@ export class Test extends BaseForm {
   static I = new Test();
 
   formDefaultValue = {
-    number: 1,
-    str: "字符串",
-    b: false,
+    number: 60,
+    str: "我觉得还行😄",
   };
 
   props = {
-    minNumber: 10,
+    minNumber: 0,
   };
 
   constructor() {
@@ -49,35 +48,30 @@ export class Test extends BaseForm {
         },
       },
     });
+    this.setShowLobel(false);
   }
 
   renderRaw({ formData }: IConRenderOp) {
     let { value } = this.getFormValueRef(formData, this.formDefaultValue);
     return (
       <NFlex vertical>
-        <NText>测试控件</NText>
+        <NText style={"color: blue;font-size: 20px;"}>
+          你觉得这个组件怎么样？
+        </NText>
         <NGrid xGap={5} yGap={5}>
-          <NGridItem span={4}>
-            <NText>数字:</NText>
-          </NGridItem>
-          <NGridItem span={20}>
-            <NInputNumber v-model:value={value.number} />
-          </NGridItem>
-        </NGrid>
-        <NGrid>
-          <NGridItem span={4}>
-            <NText>字符串:</NText>
+          <NGridItem span={5}>
+            <NText>评价:</NText>
           </NGridItem>
           <NGridItem span={20}>
             <NInput v-model:value={value.str} />
           </NGridItem>
         </NGrid>
-        <NGrid>
-          <NGridItem span={4}>
-            <NText>开关:</NText>
+        <NGrid xGap={5} yGap={5}>
+          <NGridItem span={5}>
+            <NText>分数:</NText>
           </NGridItem>
           <NGridItem span={20}>
-            <NSwitch v-model:value={value.b} />
+            <NInputNumber v-model:value={value.number} />
           </NGridItem>
         </NGrid>
       </NFlex>
@@ -89,7 +83,7 @@ export class Test extends BaseForm {
     _.find((_) => _.key == "form")?.childs.push(
       ...[
         {
-          label: "数字最小值",
+          label: "分数最小值",
           editor: <NInputNumber v-model:value={this.props.minNumber} />,
         },
       ]
