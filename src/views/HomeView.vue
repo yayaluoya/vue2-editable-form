@@ -94,7 +94,7 @@ export default defineComponent({
           </NFlex>
           <NFlex align="center">
             <NTag type="success">vue3+ts+naive-ui</NTag>
-            <a href="https://vue3-dynamic-form-docs.yayaluoya.sbs/" target="_blank"
+            <a href="https://vue3-dynamic-form-docs.dumogu.top/" target="_blank"
               ><NText>文档</NText></a
             >
             <a
