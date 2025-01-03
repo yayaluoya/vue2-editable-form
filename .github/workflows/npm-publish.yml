@@ -6,13 +6,15 @@ name: Publish Package to npmjs
 on:
   push:
     tags:
-      - "v*"
+      - "release/lib-*"
 
 jobs:
   build-and-publish-npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
+        with:
+          ref: master
       - uses: actions/setup-node@v4
         with:
           node-version: 20
