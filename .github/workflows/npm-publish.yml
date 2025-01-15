@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
+      - run: npm i
       - run: npm run lib-build
       - run: npm run publish
         env:
